@@ -1,0 +1,140 @@
+/* styles.css */
+
+/* Reset básico */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #f7fafc;
+  color: #222;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+header, footer {
+  background: #205196;
+  color: #fff;
+  padding: 12px 0;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 1.5em;
+  margin-bottom: 2px;
+}
+.subtitle {
+  font-weight: 300;
+  font-size: 1em;
+}
+
+main {
+  flex: 1 1 auto;
+  padding: 12px 0 0;
+  max-width: 440px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+#controls {
+  display: flex;
+  justify-content: center;
+  gap: 7px;
+  margin-bottom: 10px;
+  flex-wrap: wrap;
+}
+#controls button {
+  font-size: 1em;
+  padding: 7px 19px;
+  border: none;
+  border-radius: 5px;
+  background: #4292e6;
+  color: #fff;
+  box-shadow: 0 1px 4px #0040a111;
+  transition: background 0.18s;
+  cursor: pointer;
+}
+#controls button:hover,
+#controls button:focus {
+  background: #295ed7;
+}
+#status {
+  color: #222;
+  font-size: 0.97em;
+  margin-left: 5px;
+  align-self: center;
+}
+
+#canvas-container {
+  background: #e1ecf1;
+  border: 2px solid #205196;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  margin-bottom: 12px;
+  box-shadow: 0 1px 9px #0040a110;
+}
+
+canvas#simCanvas {
+  display: block;
+  background: #f7fafc;
+  border-radius: 6px;
+  box-shadow: 0 0 3px #20519624;
+  width: 96vw;
+  max-width: 340px;
+  height: auto;
+  aspect-ratio: 1/1;
+}
+
+#info {
+  margin: 0 0 10px 0;
+  font-size: 0.98em;
+  color: #224;
+  text-align: center;
+}
+legend {
+  display: inline-block;
+  width: 18px;
+  height: 14px;
+  margin: 0 2px 0 6px;
+  border-radius: 2px;
+}
+.legend.agent { background: #2ecc40; border: 1.5px solid #134e25;}
+.legend.tree  { background: #16a085; border: 1.5px solid #0a3429;}
+.legend.rock  { background: #767676; border: 1.5px solid #333;}
+.legend.food  { background: #e67e22; border: 1.5px solid #ad5a1b;}
+
+footer {
+  margin-top: 10px;
+  font-size: 1em;
+  letter-spacing: 0.01em;
+  background: #1c305d;
+}
+
+footer a {
+  color: #aedaeb;
+  text-decoration: underline;
+  font-size: 0.97em;
+}
+
+@media (max-width: 500px) {
+  header h1 { font-size: 1.1em; }
+  #canvas-container { padding: 4px; }
+  #controls button { font-size: 0.98em; padding: 6px 10px; }
+  main { padding: 5px 0 0 0; }
+  footer { font-size: 0.97em; }
+}
+
+::-webkit-scrollbar {
+  width: 0.5em;
+  background: #e1ecf1;
+}
+::-webkit-scrollbar-thumb {
+  background: #b5cdf1;
+  border-radius: 8px;
+}
