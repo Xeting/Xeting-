@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mundo 2D IA - TensorFlow.js</title>
+  <link rel="stylesheet" href="styles.css"/>
+  <!-- TensorFlow.js CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@4.18.0/dist/tf.min.js"></script>
+</head>
+<body>
+  <header>
+    <h1>Mundo 2D com IA (TensorFlow.js)</h1>
+    <p class="subtitle">Simulação de agentes aprendendo em 2D | <span id="by">por Xeting</span></p>
+  </header>
+
+  <main>
+    <div id="controls">
+      <button id="startBtn">Iniciar</button>
+      <button id="pauseBtn">Pausar</button>
+      <button id="resetBtn">Resetar</button>
+      <span id="status"></span>
+    </div>
+    <div id="canvas-container">
+      <canvas id="simCanvas" width="360" height="360"></canvas>
+    </div>
+    <div id="info">
+        <p>
+          <strong>Legend:</strong><br>
+          <span class="legend agent"></span> Agente IA &nbsp; 
+          <span class="legend tree"></span> Árvore &nbsp;
+          <span class="legend rock"></span> Pedra &nbsp;
+          <span class="legend food"></span> Comida
+        </p>
+        <p>
+          <small>Tocando ou arrastando movimenta o agente selecionado (modo debug manual, para demonstração).</small>
+        </p>
+    </div>
+  </main>
+
+  <footer>
+    <p>Projeto <strong>Xeting</strong> • Powered by TensorFlow.js • MIT</p>
+    <p>
+      <a href="https://github.com/Xeting/mundo-2d-ia-tfjs" target="_blank">Ver código no GitHub</a>
+    </p>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
