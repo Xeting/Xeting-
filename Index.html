@@ -1,50 +1,264 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Mundo 2D IA - TensorFlow.js</title>
-  <link rel="stylesheet" href="styles.css"/>
-  <!-- TensorFlow.js CDN -->
-  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@4.18.0/dist/tf.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Xeting - A modern web application with enhanced user experience and accessibility">
+    <meta name="keywords" content="Xeting, web application, modern, accessible">
+    <meta name="author" content="Xeting">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Xeting - Modern Web Application">
+    <meta property="og:description" content="A modern web application with enhanced user experience and accessibility">
+    <meta property="og:type" content="website">
+    
+    <title>Xeting - Modern Web Application</title>
+    <link rel="stylesheet" href="styles.css" type="text/css">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="preload" href="main.js" as="script">
 </head>
 <body>
-  <header>
-    <h1>Mundo 2D com IA (TensorFlow.js)</h1>
-    <p class="subtitle">Simulação de agentes aprendendo em 2D | <span id="by">por Xeting</span></p>
-  </header>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
+    <!-- Header Section -->
+    <header class="site-header" role="banner" aria-label="Site header">
+        <nav class="navbar" role="navigation" aria-label="Primary navigation">
+            <div class="navbar-container">
+                <a href="Index.html" class="logo" aria-label="Xeting home">
+                    <h1>Xeting</h1>
+                </a>
+                <button class="menu-toggle" 
+                        id="menu-toggle" 
+                        aria-label="Toggle navigation menu" 
+                        aria-expanded="false" 
+                        aria-controls="nav-menu">
+                    <span class="hamburger"></span>
+                </button>
+                <menu id="nav-menu" 
+                      class="nav-menu" 
+                      aria-label="Navigation menu"
+                      data-menu-state="closed">
+                    <li><a href="#home" class="nav-link" data-nav-item="home">Home</a></li>
+                    <li><a href="#about" class="nav-link" data-nav-item="about">About</a></li>
+                    <li><a href="#features" class="nav-link" data-nav-item="features">Features</a></li>
+                    <li><a href="#services" class="nav-link" data-nav-item="services">Services</a></li>
+                    <li><a href="#contact" class="nav-link" data-nav-item="contact">Contact</a></li>
+                </menu>
+            </div>
+        </nav>
+    </header>
 
-  <main>
-    <div id="controls">
-      <button id="startBtn">Iniciar</button>
-      <button id="pauseBtn">Pausar</button>
-      <button id="resetBtn">Resetar</button>
-      <span id="status"></span>
-    </div>
-    <div id="canvas-container">
-      <canvas id="simCanvas" width="360" height="360"></canvas>
-    </div>
-    <div id="info">
-        <p>
-          <strong>Legend:</strong><br>
-          <span class="legend agent"></span> Agente IA &nbsp; 
-          <span class="legend tree"></span> Árvore &nbsp;
-          <span class="legend rock"></span> Pedra &nbsp;
-          <span class="legend food"></span> Comida
-        </p>
-        <p>
-          <small>Tocando ou arrastando movimenta o agente selecionado (modo debug manual, para demonstração).</small>
-        </p>
-    </div>
-  </main>
+    <!-- Main Content -->
+    <main id="main-content" class="main-content" role="main" aria-label="Main content">
+        
+        <!-- Hero Section -->
+        <section id="home" 
+                 class="hero-section" 
+                 aria-label="Hero section"
+                 data-section="hero">
+            <div class="hero-content">
+                <h2 class="hero-title">Welcome to Xeting</h2>
+                <p class="hero-subtitle">Modern Web Solutions for Modern Problems</p>
+                <button class="cta-button" 
+                        aria-label="Get started with Xeting" 
+                        data-action="get-started">
+                    Get Started
+                </button>
+            </div>
+        </section>
 
-  <footer>
-    <p>Projeto <strong>Xeting</strong> • Powered by TensorFlow.js • MIT</p>
-    <p>
-      <a href="https://github.com/Xeting/mundo-2d-ia-tfjs" target="_blank">Ver código no GitHub</a>
-    </p>
-  </footer>
+        <!-- About Section -->
+        <section id="about" 
+                 class="about-section" 
+                 aria-labelledby="about-heading"
+                 data-section="about">
+            <div class="section-container">
+                <header>
+                    <h2 id="about-heading">About Us</h2>
+                </header>
+                <article class="about-content">
+                    <p>Xeting is dedicated to providing high-quality web solutions with a focus on accessibility, performance, and user experience.</p>
+                    <p>Our mission is to create web applications that are not only functional but also accessible to everyone, regardless of their abilities.</p>
+                </article>
+            </div>
+        </section>
 
-  <script src="main.js"></script>
+        <!-- Features Section -->
+        <section id="features" 
+                 class="features-section" 
+                 aria-labelledby="features-heading"
+                 data-section="features">
+            <div class="section-container">
+                <header>
+                    <h2 id="features-heading">Key Features</h2>
+                </header>
+                <ul class="features-grid" role="list" data-feature-list="main">
+                    <li class="feature-card" 
+                        role="article"
+                        data-feature="semantic-html"
+                        data-feature-index="1">
+                        <h3>Semantic HTML</h3>
+                        <p>Built with semantic HTML5 elements for better structure and SEO.</p>
+                    </li>
+                    <li class="feature-card" 
+                        role="article"
+                        data-feature="accessibility"
+                        data-feature-index="2">
+                        <h3>Accessibility First</h3>
+                        <p>WCAG compliant with proper ARIA labels and keyboard navigation support.</p>
+                    </li>
+                    <li class="feature-card" 
+                        role="article"
+                        data-feature="responsive-design"
+                        data-feature-index="3">
+                        <h3>Responsive Design</h3>
+                        <p>Works seamlessly on desktop, tablet, and mobile devices.</p>
+                    </li>
+                    <li class="feature-card" 
+                        role="article"
+                        data-feature="performance"
+                        data-feature-index="4">
+                        <h3>High Performance</h3>
+                        <p>Optimized for speed with minimal dependencies and efficient code.</p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" 
+                 class="services-section" 
+                 aria-labelledby="services-heading"
+                 data-section="services">
+            <div class="section-container">
+                <header>
+                    <h2 id="services-heading">Our Services</h2>
+                </header>
+                <div class="services-list" role="region" aria-label="Services offered">
+                    <article class="service-item" 
+                             data-service="web-development"
+                             data-service-id="1">
+                        <h3>Web Development</h3>
+                        <p>Custom web development solutions tailored to your needs.</p>
+                    </article>
+                    <article class="service-item" 
+                             data-service="consulting"
+                             data-service-id="2">
+                        <h3>Consulting</h3>
+                        <p>Expert advice on web technologies and best practices.</p>
+                    </article>
+                    <article class="service-item" 
+                             data-service="maintenance"
+                             data-service-id="3">
+                        <h3>Maintenance & Support</h3>
+                        <p>Ongoing support and maintenance for your applications.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" 
+                 class="contact-section" 
+                 aria-labelledby="contact-heading"
+                 data-section="contact">
+            <div class="section-container">
+                <header>
+                    <h2 id="contact-heading">Get In Touch</h2>
+                </header>
+                <form class="contact-form" 
+                      method="POST" 
+                      aria-label="Contact form"
+                      data-form="contact"
+                      novalidate>
+                    <fieldset>
+                        <legend>Contact Information</legend>
+                        <div class="form-group">
+                            <label for="name">Name <span aria-label="required">*</span></label>
+                            <input type="text" 
+                                   id="name" 
+                                   name="name" 
+                                   required 
+                                   aria-required="true"
+                                   aria-describedby="name-error"
+                                   data-field="name">
+                            <span id="name-error" class="error-message" role="alert"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email <span aria-label="required">*</span></label>
+                            <input type="email" 
+                                   id="email" 
+                                   name="email" 
+                                   required 
+                                   aria-required="true"
+                                   aria-describedby="email-error"
+                                   data-field="email">
+                            <span id="email-error" class="error-message" role="alert"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message <span aria-label="required">*</span></label>
+                            <textarea id="message" 
+                                      name="message" 
+                                      rows="5" 
+                                      required 
+                                      aria-required="true"
+                                      aria-describedby="message-error"
+                                      data-field="message"></textarea>
+                            <span id="message-error" class="error-message" role="alert"></span>
+                        </div>
+                    </fieldset>
+                    <button type="submit" 
+                            class="submit-button" 
+                            aria-label="Submit contact form"
+                            data-action="submit-contact">
+                        Send Message
+                    </button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="site-footer" role="contentinfo" aria-label="Site footer">
+        <div class="footer-content">
+            <div class="footer-section" data-footer-section="about">
+                <h3>About Xeting</h3>
+                <p>Creating modern, accessible web solutions.</p>
+            </div>
+            <div class="footer-section" data-footer-section="links">
+                <h3>Quick Links</h3>
+                <nav aria-label="Footer navigation">
+                    <ul role="list">
+                        <li><a href="#home" data-footer-link="home">Home</a></li>
+                        <li><a href="#about" data-footer-link="about">About</a></li>
+                        <li><a href="#contact" data-footer-link="contact">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="footer-section" data-footer-section="social">
+                <h3>Follow Us</h3>
+                <nav aria-label="Social media links">
+                    <ul role="list">
+                        <li><a href="#" data-social="twitter" aria-label="Follow us on Twitter">Twitter</a></li>
+                        <li><a href="#" data-social="linkedin" aria-label="Follow us on LinkedIn">LinkedIn</a></li>
+                        <li><a href="#" data-social="github" aria-label="Visit our GitHub">GitHub</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Xeting. All rights reserved.</p>
+            <nav aria-label="Footer legal links">
+                <ul role="list" class="legal-links">
+                    <li><a href="#" data-legal="privacy">Privacy Policy</a></li>
+                    <li><a href="#" data-legal="terms">Terms of Service</a></li>
+                    <li><a href="#" data-legal="accessibility">Accessibility Statement</a></li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="main.js" type="module" async></script>
 </body>
 </html>
